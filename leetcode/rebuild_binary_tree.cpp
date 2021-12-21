@@ -37,11 +37,12 @@ public:
 
 void print(TreeNode* & node,vector<int>& arr){
     if(node==NULL){
-        arr.push_back(100);
+        //arr.push_back(100);
+        cout<< "null" << "\t";
         return ;
     }
-
-    arr.push_back(node->val);
+    cout<< node->val <<"\t";
+    //arr.push_back(node->val);
     print(node->left,arr);
     print(node->right,arr);
 }
@@ -68,7 +69,7 @@ int main(){
     TreeNode* node= s.buildtree(preorder,inorder);
     vector<int> arr;
     print(node,arr);
-    for(int i=0;i<arr.size();i++){
-        cout<<arr[i]<< "\t";
-    }
+    // for(int i=0;i<arr.size();i++){
+    //     cout<<arr[i]<< "\t";
+    // }
 }
